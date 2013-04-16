@@ -10,7 +10,7 @@ class Imu2Odom:
 
     def __init__(self):
         rospy.init_node('imu_to_odom')
-        self.pub = rospy.Publisher('odom', Odom)
+        self.pub = rospy.Publisher('odom', Odometry)
         self.sub = rospy.Subscriber("imu_data", Imu, self.handle_imu)
         
         self.imu_recv = False
